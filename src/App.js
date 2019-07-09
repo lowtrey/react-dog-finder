@@ -47,7 +47,7 @@ class App extends React.Component {
       <div className='App'>
         <Nav links={links} />
         <Switch>
-          <Route exact path='/dogs' component={Dogs} />
+          <Route exact path='/dogs' render={() => <Dogs allDogs={this.props.dogs} />} />
           <Route 
             path="/dogs/:dogName"
             render={(routeProps) => {
