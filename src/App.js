@@ -40,10 +40,10 @@ class App extends React.Component {
     ]
   }
   render() {
+    let links = this.props.dogs.map(dog => (dog.name));
     return (
       <div className='App'>
-        <Nav />
-        {/* <h1>{ this.props.dogs.map(dog => (dog.name)) }</h1> */}
+        <Nav links={links} />
         <Switch>
           <Route exact path='/dogs' component={Dogs} />
         </Switch>
