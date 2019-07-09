@@ -1,4 +1,7 @@
-import React from 'react';  
+import React from 'react';
+import Nav from './Nav';
+import Dogs from './Dogs';
+import { Switch, Route } from 'react-router-dom';  
 import './App.css';
 
 class App extends React.Component {
@@ -38,8 +41,12 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <h1>App</h1>
+      <div className='App'>
+        <Nav />
+        {/* <h1>{ this.props.dogs.map(dog => (dog.name)) }</h1> */}
+        <Switch>
+          <Route exact path='/dogs' component={Dogs} />
+        </Switch>
       </div>
     );
   }
