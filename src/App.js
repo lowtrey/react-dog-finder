@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import Dog from './Dog';
 import Dogs from './Dogs';
 import { Switch, Route } from 'react-router-dom';  
 import './App.css';
@@ -39,6 +40,7 @@ class App extends React.Component {
       }
     ]
   }
+
   render() {
     let links = this.props.dogs.map(dog => (dog.name));
     return (
@@ -46,6 +48,14 @@ class App extends React.Component {
         <Nav links={links} />
         <Switch>
           <Route exact path='/dogs' component={Dogs} />
+          <Route 
+            path="/dogs/:dogName"
+            render={(routeProps) => {
+              let dogObj = this.props.dogs.filter(dog => 
+                (dog.name.toLowerCase() === routeProps.match.params.dogName))[0];
+              return <Dog dog={dogObj} />;
+            }} 
+          />
         </Switch>
       </div>
     );

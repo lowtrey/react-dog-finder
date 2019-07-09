@@ -6,7 +6,7 @@ class Nav extends React.Component {
   render() {
     let navLinks = this.props.links.map(link => (
       <NavLink 
-        exact to={`/${link.toLowerCase()}`}
+        exact to={`/dogs/${link.toLowerCase()}`}
         className='Nav'
         key={link}
         activeClassName='Nav-active'
@@ -23,7 +23,7 @@ class Nav extends React.Component {
         >
           <h4>Home</h4>
         </NavLink>
-        { navLinks }
+        {navLinks}
       </div>
     );
   }

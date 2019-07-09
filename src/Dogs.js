@@ -5,9 +5,9 @@ class Dogs extends React.Component {
   render() {
     return(
       <div>
-        <Dog />
-        <Dog />
-        <Dog />
+        {/* <Dog  />
+        <Dog  />
+        <Dog  /> */}
       </div>
     );
   }
