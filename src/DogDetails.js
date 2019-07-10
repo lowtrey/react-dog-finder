@@ -16,6 +16,14 @@ class DogDetails extends React.Component {
                   {dog.age} years old
                 </h4>
               </div>
+              <ul className='list-group list-group-flush'>
+                {dog.facts.map((fact, i) => (
+                  <li className='list-group-item' key={i}>
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+              <div className='card-body'>Go Back</div>
             </div>
           </div>
         </div>
