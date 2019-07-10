@@ -53,7 +53,7 @@ class App extends React.Component {
     };
     return (
       <div>
-        <Navbar />
+        <Navbar dogs={this.props.dogs} />
         <Switch>
           <Route 
             exact path='/dogs' 
