@@ -6,7 +6,6 @@ class DogList extends React.Component {
     return (
       <div className='DogList'>
         <h1 className='display-1 text-center'>Dog List!</h1>
-        <div className='container'>
           <div className='row'>
             {this.props.dogs.map(d => (
               <div className='Dog col-lg-4 text-center' key={d.name}>
@@ -15,7 +14,6 @@ class DogList extends React.Component {
               </div>
             ))}
           </div>
-        </div>
       </div>
     );
   }
