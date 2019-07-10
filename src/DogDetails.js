@@ -1,12 +1,13 @@
 import React from 'react';
 import './DogDetails.css';
+import { Link } from 'react-router-dom';
 
 class DogDetails extends React.Component {
   render() {
     let {dog} = this.props;
     return (
       <div className='container'>
-        <div className='DogDetails row'>
+        <div className='DogDetails row justify-content-center mt-5'>
           <div className='col-11 col-lg-5'>
             <div className='DogDetails-card card'>
               <img className='card-img-top' src={dog.src} alt={dog.name} />
@@ -23,7 +24,9 @@ class DogDetails extends React.Component {
                   </li>
                 ))}
               </ul>
-              <div className='card-body'>Go Back</div>
+              <div className='card-body'>
+                <Link to='/dogs' className='btn btn-info'>Go Back</Link>
+              </div>
             </div>
           </div>
         </div>
